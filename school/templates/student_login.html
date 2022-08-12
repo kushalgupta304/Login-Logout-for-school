@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href={% static 'css/login.css' %}>
+	</head>
+
+<body>
+<div class="login-container">
+	<section class="login" id="login">
+	  <header>
+		<h2>Student login</h2>
+		
+	  </header>
+	  <form class="login-form" action="/student_login/" method="post">
+		{% csrf_token %}
+		{{login_form}}
+		<div class="submit-container">
+			<button type="submit" class="login-button">SIGN IN</button>
+		</div>
+	  </form>
+	</section>
+	
+  </div>
+  
+</body>
+</html>
